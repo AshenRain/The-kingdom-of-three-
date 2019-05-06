@@ -1,41 +1,96 @@
 import javax.swing.*;
+import java.util.Vector;
+
+public class Info{
+    Vector fields = new Vector();
+    Vector fieldsCoordinates = new Vector(); // хранит координаты полей, нужен только для старта при создании поля
+    Vector characters = new Vector();
+    Vector coordinates = new Vector();
+
+    Player N1 = new Player();
+    Player N2 = new Player();
+    Player N3 = new Player();
+
+    // Зона 1
+    fieldsCoordinates.addElement(new Int (1xx1));
+
+
+}
 
 public class MathModule {
 
-    /// PLAYER COMMAND
 
-    void PlayerMovement()
-    {
-        // игрок выбирает юнита, который не ходил
-        // после выбора запускается меню выбора дейстивий фигуры (находится в классе character)
+    // добавить экземпляр класса поле с наименованием home
+    // добавить флажек для определения ходила фигура или нет в класс Character
+
+    /// START
+    void Start(Info Base){
+        for (int i = 0; i<=46; i++){
+             Base.fields.addElement(FabricField.createField());
+             Base.fields[i].coordinate = Base.fieldsCoordinates[i];
+             // добавить бонусные зоны
+        }
+        // открытие окна игрока, который ходит
     }
 
 
-    void PlayerKingdomSkill(int skill) // скил при обороне замка
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /// PLAYER COMMAND
+
+    void PlayerMovement(Info Base)
+    {
+        // открывыется окно и печатается список фигур, которые не ходили
+        // игрок выбирает юнита {запускается окно с выбором фигуры и игрок выбирает нужную)
+        // после выбора запускается окно выбора дейстивий юнита (находится в классе character) c двумя метода
+    }
+
+
+    void PlayerKingdomSkill(Info Base, int skill) // скил при обороне замка
     {
         // на стадии концепции
     }
 
-    void PlayerCallUnit(int unit) // выбор юнита для призыва
+    void PlayerCallUnit(Info Base, int unit) // выбор юнита для призыва
     {
-        // покупка юнита за ресурсы
+        // открывается окно выбора юнита для призыва
     }
 
-    void PlayerEndMove()
+    void PlayerEndMove(Info Base)
     {
-        // перед передачей проверяется, остались ли фигуры, которые не походили
+        // перед передачей проверяется, остались ли фигуры, которые не подходили
+        for(int i=0; i <= Base.characters.size(); i++){
+            if(Base.characters.) // проверяется принадлежность фигуры к нужному игроку и ходила ли она
+            {
+                // выводиться диалоговое окно с сообщением о том что данная фигура ниходила,
+                // на выбор предлогается кнопка которая октрывает окно действий для нанной фигуры
+                // и окно с возможностью продолжить
+            }
+        }
+
     }
 
     /// CHARACTER COMMAND
 
-    void CharacterMove(int field_code) // передается код ячейки куда хочет перейти фигура
+    void CharacterMove(Info Base, int field_code) // передается код ячейки куда хочет перейти фигура
     {
         // проверка не занята ли ячейка
         // проверка соседняя ли это ячейка (3 формулы из теор. базиса.)
         // передвижение в нужную ячейку
     }
 
-    void CharacterAttack(int field_code) // передается код ячейки куда хочет напасть фигура
+    void CharacterAttack(Info Base, int field_code) // передается код ячейки куда хочет напасть фигура
     {
         // проверка есть ли кто-то в ячейке, и враг ли это
         // просчет получения урона
