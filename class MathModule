@@ -2,17 +2,62 @@ import javax.swing.*;
 import java.util.Vector;
 
 public class Info{
-    Vector fields = new Vector();
-    Vector fieldsCoordinates = new Vector(); // хранит координаты полей, нужен только для старта при создании поля
-    Vector characters = new Vector();
-    Vector coordinates = new Vector();
+
+    // Vector fields = new Vector();
+    // Vector fieldsCoordinates = new Vector(); 
+    // Vector characters = new Vector();
+    // Vector coordinates = new Vector();
+    
+    ArrayList<Field> fields = new ArrayList<Field>();
+    ArrayList<int> fieldsCoordinates = new ArrayList<int>(); // хранит координаты полей, нужен только для старта при создании поля
+    ArrayList<Character> fields = new ArrayList<Character>();
+    
 
     Player N1 = new Player();
     Player N2 = new Player();
     Player N3 = new Player();
 
     // Зона 1
-    fieldsCoordinates.addElement(new Int (1xx1));
+    fieldsCoordinates.add(1111);//Это
+    fieldsCoordinates.add(1221);//База 
+    fieldsCoordinates.add(1331);//Игрока
+    fieldsCoordinates.add(1441);//Это тоже
+    fieldsCoordinates.add(1112);
+    fieldsCoordinates.add(1222);
+    fieldsCoordinates.add(1332);
+    fieldsCoordinates.add(1442);
+    fieldsCoordinates.add(1113);
+    fieldsCoordinates.add(1223);
+    fieldsCoordinates.add(1333);
+    fieldsCoordinates.add(1443);
+    
+    // Зона 2
+    fieldsCoordinates.add(2131);//Это
+    fieldsCoordinates.add(2232);//База 
+    fieldsCoordinates.add(2333);//Игрока
+    fieldsCoordinates.add(2434);//Это тоже
+    fieldsCoordinates.add(2124);
+    fieldsCoordinates.add(2223);
+    fieldsCoordinates.add(2322);
+    fieldsCoordinates.add(2421);
+    fieldsCoordinates.add(2114);
+    fieldsCoordinates.add(2213);
+    fieldsCoordinates.add(2312);
+    fieldsCoordinates.add(2411);
+    
+    // Зона 3
+    fieldsCoordinates.add(3111);//Это
+    fieldsCoordinates.add(3122);//База 
+    fieldsCoordinates.add(3133);//Игрока
+    fieldsCoordinates.add(3144);//Это тоже
+    fieldsCoordinates.add(3211);
+    fieldsCoordinates.add(3222);
+    fieldsCoordinates.add(3233);
+    fieldsCoordinates.add(3244);
+    fieldsCoordinates.add(3311);
+    fieldsCoordinates.add(3322);
+    fieldsCoordinates.add(3333);
+    fieldsCoordinates.add(3344);
 
 
 }
