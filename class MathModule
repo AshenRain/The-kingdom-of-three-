@@ -59,14 +59,27 @@ public class Info{
     fieldsCoordinates.add(3333);
     fieldsCoordinates.add(3344);
 
+    // Зона 4
+    fieldsCoordinates.add(4114);
+    fieldsCoordinates.add(4213);
+    fieldsCoordinates.add(4312);
+    fieldsCoordinates.add(4411);
+    fieldsCoordinates.add(4214);
+    fieldsCoordinates.add(4313);
+    fieldsCoordinates.add(4412);
+    fieldsCoordinates.add(4224);
+    fieldsCoordinates.add(4323);
+    fieldsCoordinates.add(4422);
+    fieldsCoordinates.add(4324);
+    fieldsCoordinates.add(4423);
+    fieldsCoordinates.add(4334);
+    fieldsCoordinates.add(4433);
+    fieldsCoordinates.add(4434);
+    fieldsCoordinates.add(4444);
 
 }
 
-public class FabricField{
-    public Field createField(){
-        return(new Field);
-    }
-}
+
 
 public class MathModule {
 
@@ -77,10 +90,15 @@ public class MathModule {
     /// START
     void Start(Info Base){
         for (int i = 0; i<=55; i++){
-             Base.fields.add(FabricField.createField());
-             Base.fields[i].coordinate = Base.fieldsCoordinates[i];
+             Base.fields.add(Fabric_Field.createField());
+             Base.fields.get(i).coordinate = Base.fieldsCoordinates[i];
              // добавить бонусные зоны
         }
+        
+        
+        
+        
+        
         // открытие окна игрока, который ходит
     }
 
