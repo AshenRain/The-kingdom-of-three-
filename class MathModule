@@ -60,10 +60,10 @@ public class Info{
     fieldsCoordinates.add(3344);
 
     // Зона 4
-    fieldsCoordinates.add(4114);
+    fieldsCoordinates.add(4114); //шахта
     fieldsCoordinates.add(4213);
     fieldsCoordinates.add(4312);
-    fieldsCoordinates.add(4411);
+    fieldsCoordinates.add(4411); //шахта
     fieldsCoordinates.add(4214);
     fieldsCoordinates.add(4313);
     fieldsCoordinates.add(4412);
@@ -75,7 +75,7 @@ public class Info{
     fieldsCoordinates.add(4334);
     fieldsCoordinates.add(4433);
     fieldsCoordinates.add(4434);
-    fieldsCoordinates.add(4444);
+    fieldsCoordinates.add(4444); //шахта
 
 }
 
@@ -89,11 +89,38 @@ public class MathModule {
 
     /// START
     void Start(Info Base){
-        for (int i = 0; i<=55; i++){
+        for (int i = 0; i<55; i++){
              Base.fields.add(Fabric_Field.createField());
              Base.fields.get(i).coordinate = Base.fieldsCoordinates[i];
+             if (Base.fields.get(i).coordinate = 4114 or Base.fields.get(i).coordinate = 4411 or Base.fields.get(i).coordinate = 4444){
+                Base.fields.get(i).type = 3; // Это Рудник
+             }
+             if else (Base.fields.get(i).coordinate = 1111 or
+                      Base.fields.get(i).coordinate = 1221 or
+                      Base.fields.get(i).coordinate = 1331 or
+                      Base.fields.get(i).coordinate = 1441 or
+                      
+                      Base.fields.get(i).coordinate = 2134 or
+                      Base.fields.get(i).coordinate = 2233 or
+                      Base.fields.get(i).coordinate = 2332 or
+                      Base.fields.get(i).coordinate = 2431 or
+                      
+                      Base.fields.get(i).coordinate = 3111 or
+                      Base.fields.get(i).coordinate = 3122 or
+                      Base.fields.get(i).coordinate = 3133 or
+                      Base.fields.get(i).coordinate = 3144 
+             ){
+                Base.fields.get(i).type = 1; // Это поле является королевством игрока
+             }
+             else{
+                Base.fields.get(i).type = 2; // Это обычное поле
+             }
+             
+             
+             
              // добавить бонусные зоны
-        }
+           }
+        
         
         
         
