@@ -62,6 +62,12 @@ public class Info{
 
 }
 
+public class FabricField{
+    public Field createField(){
+        return(new Field);
+    }
+}
+
 public class MathModule {
 
 
@@ -70,8 +76,8 @@ public class MathModule {
 
     /// START
     void Start(Info Base){
-        for (int i = 0; i<=46; i++){
-             Base.fields.addElement(FabricField.createField());
+        for (int i = 0; i<=55; i++){
+             Base.fields.add(FabricField.createField());
              Base.fields[i].coordinate = Base.fieldsCoordinates[i];
              // добавить бонусные зоны
         }
