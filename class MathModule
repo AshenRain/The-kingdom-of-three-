@@ -92,23 +92,23 @@ public class MathModule {
         for (int i = 0; i<55; i++){
              Base.fields.add(Fabric_Field.createField());
              Base.fields.get(i).coordinate = Base.fieldsCoordinates[i];
-             if (Base.fields.get(i).coordinate = 4114 or Base.fields.get(i).coordinate = 4411 or Base.fields.get(i).coordinate = 4444){
+             if (Base.fields.get(i).coordinate == 4114 or Base.fields.get(i).coordinate == 4411 or Base.fields.get(i).coordinate == 4444){
                 Base.fields.get(i).type = 3; // Это Рудник
              }
-             if else (Base.fields.get(i).coordinate = 1111 or
-                      Base.fields.get(i).coordinate = 1221 or
-                      Base.fields.get(i).coordinate = 1331 or
-                      Base.fields.get(i).coordinate = 1441 or
+             if else (Base.fields.get(i).coordinate == 1111 or
+                      Base.fields.get(i).coordinate == 1221 or
+                      Base.fields.get(i).coordinate == 1331 or
+                      Base.fields.get(i).coordinate == 1441 or
                       
-                      Base.fields.get(i).coordinate = 2134 or
-                      Base.fields.get(i).coordinate = 2233 or
-                      Base.fields.get(i).coordinate = 2332 or
-                      Base.fields.get(i).coordinate = 2431 or
+                      Base.fields.get(i).coordinate == 2134 or
+                      Base.fields.get(i).coordinate == 2233 or
+                      Base.fields.get(i).coordinate == 2332 or
+                      Base.fields.get(i).coordinate == 2431 or
                       
-                      Base.fields.get(i).coordinate = 3111 or
-                      Base.fields.get(i).coordinate = 3122 or
-                      Base.fields.get(i).coordinate = 3133 or
-                      Base.fields.get(i).coordinate = 3144 
+                      Base.fields.get(i).coordinate == 3111 or
+                      Base.fields.get(i).coordinate == 3122 or
+                      Base.fields.get(i).coordinate == 3133 or
+                      Base.fields.get(i).coordinate == 3144 
              ){
                 Base.fields.get(i).type = 1; // Это поле является королевством игрока
              }
@@ -116,9 +116,7 @@ public class MathModule {
                 Base.fields.get(i).type = 2; // Это обычное поле
              }
              
-             
-             
-             // добавить бонусные зоны
+ 
            }
         
         
@@ -178,12 +176,19 @@ public class MathModule {
     }
 
     /// CHARACTER COMMAND
-
-    void CharacterMove(Info Base, int field_code) // передается код ячейки куда хочет перейти фигура
+    
+    void CharacterMove(Info Base, Character figure) // передается код ячейки куда хочет перейти фигура
     {
         // проверка не занята ли ячейка
         // проверка соседняя ли это ячейка (3 формулы из теор. базиса.)
         // передвижение в нужную ячейку
+        
+        
+        for (int i = 0; i < 55; i++)
+        {
+            figure.coordinate 
+            Base.fields.get(i).coordinate = 4114 or
+        }
     }
 
     void CharacterAttack(Info Base, int field_code) // передается код ячейки куда хочет напасть фигура
