@@ -177,19 +177,60 @@ public class MathModule {
 
     /// CHARACTER COMMAND
     
-    void CharacterMove(Info Base, Character figure) // передается код ячейки куда хочет перейти фигура
+    void CharacterMove(Info Base, Character figure, int nado) // передается код ячейки куда хочет перейти фигура
     {
         // проверка не занята ли ячейка
         // проверка соседняя ли это ячейка (3 формулы из теор. базиса.)
         // передвижение в нужную ячейку
         
-        
-        for (int i = 0; i < 55; i++)
+        if((здесь должно быть поле отвечающее за очки движения)!=0 и (проверка занято ли указанное поле)){
+            for (int i = 0; i < 55; i++){
+                if (sosed(Base, figure.coordinate, nado))
+                {
+                    //если сработало значит перевести фигуры в эту клетку
+                }
+                Base.fields.get(i).coordinate 
+            }
+        }
+        else
         {
-            figure.coordinate 
-            Base.fields.get(i).coordinate = 4114 or
+            //уведмоляет пользователя что у фигуры не осталось очков передвижения
+            //или о том что клетка не является соседней
         }
     }
+    
+    boolean sosed(Info Base,int coordinate, int nado){
+        int c1,c2,S,k;
+        k = 1000
+        c1 = (int)coordinate/1000;
+        c2 = (int)nado/1000;
+        
+        while (coordinate != 0)
+        {
+            coordinate %=k;
+            nado %=k;
+            k /=10;
+            S += ((int)coordinate/k - (int)nado/k);
+        }
+        
+        
+        if (c1 != 4 and c1 == c2 )
+        {
+            if (S <= 2) return true;
+            else return false;
+        }
+        else if (c1 != 4 and c2 == 4 or c1 == 4 and c2 != 4)
+        {
+            if (S <= 1) return true;
+            else return false;
+        }
+        else if (c1 == 4 and c2 == 4)
+        {
+            if (S <= 1) return true;
+            else return false;
+        }
+    }
+    
 
     void CharacterAttack(Info Base, int field_code) // передается код ячейки куда хочет напасть фигура
     {
