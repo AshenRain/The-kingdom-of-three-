@@ -17,65 +17,7 @@ public class Info{
     Player N2 = new Player();
     Player N3 = new Player();
 
-    // Зона 1
-    fieldsCoordinates.add(1111);//Это
-    fieldsCoordinates.add(1221);//База 
-    fieldsCoordinates.add(1331);//Игрока
-    fieldsCoordinates.add(1441);//Это тоже
-    fieldsCoordinates.add(1112);
-    fieldsCoordinates.add(1222);
-    fieldsCoordinates.add(1332);
-    fieldsCoordinates.add(1442);
-    fieldsCoordinates.add(1113);
-    fieldsCoordinates.add(1223);
-    fieldsCoordinates.add(1333);
-    fieldsCoordinates.add(1443);
     
-    // Зона 2
-    fieldsCoordinates.add(2131);//Это
-    fieldsCoordinates.add(2232);//База 
-    fieldsCoordinates.add(2333);//Игрока
-    fieldsCoordinates.add(2434);//Это тоже
-    fieldsCoordinates.add(2124);
-    fieldsCoordinates.add(2223);
-    fieldsCoordinates.add(2322);
-    fieldsCoordinates.add(2421);
-    fieldsCoordinates.add(2114);
-    fieldsCoordinates.add(2213);
-    fieldsCoordinates.add(2312);
-    fieldsCoordinates.add(2411);
-    
-    // Зона 3
-    fieldsCoordinates.add(3111);//Это
-    fieldsCoordinates.add(3122);//База 
-    fieldsCoordinates.add(3133);//Игрока
-    fieldsCoordinates.add(3144);//Это тоже
-    fieldsCoordinates.add(3211);
-    fieldsCoordinates.add(3222);
-    fieldsCoordinates.add(3233);
-    fieldsCoordinates.add(3244);
-    fieldsCoordinates.add(3311);
-    fieldsCoordinates.add(3322);
-    fieldsCoordinates.add(3333);
-    fieldsCoordinates.add(3344);
-
-    // Зона 4
-    fieldsCoordinates.add(4114); //шахта
-    fieldsCoordinates.add(4213);
-    fieldsCoordinates.add(4312);
-    fieldsCoordinates.add(4411); //шахта
-    fieldsCoordinates.add(4214);
-    fieldsCoordinates.add(4313);
-    fieldsCoordinates.add(4412);
-    fieldsCoordinates.add(4224);
-    fieldsCoordinates.add(4323);
-    fieldsCoordinates.add(4422);
-    fieldsCoordinates.add(4324);
-    fieldsCoordinates.add(4423);
-    fieldsCoordinates.add(4334);
-    fieldsCoordinates.add(4433);
-    fieldsCoordinates.add(4434);
-    fieldsCoordinates.add(4444); //шахта
 
 }
 
@@ -92,22 +34,22 @@ public class MathModule {
         for (int i = 0; i<55; i++){
              Base.fields.add(Fabric_Field.createField());
              Base.fields.get(i).coordinate = Base.fieldsCoordinates[i];
-             if (Base.fields.get(i).coordinate == 4114 or Base.fields.get(i).coordinate == 4411 or Base.fields.get(i).coordinate == 4444){
+             if (Base.fields.get(i).coordinate == 4114 || Base.fields.get(i).coordinate == 4411 || Base.fields.get(i).coordinate == 4444){
                 Base.fields.get(i).type = 3; // Это Рудник
              }
-             if else (Base.fields.get(i).coordinate == 1111 or
-                      Base.fields.get(i).coordinate == 1221 or
-                      Base.fields.get(i).coordinate == 1331 or
-                      Base.fields.get(i).coordinate == 1441 or
+             if else (Base.fields.get(i).coordinate == 1111 ||
+                      Base.fields.get(i).coordinate == 1221 ||
+                      Base.fields.get(i).coordinate == 1331 ||
+                      Base.fields.get(i).coordinate == 1441 ||
                       
-                      Base.fields.get(i).coordinate == 2134 or
-                      Base.fields.get(i).coordinate == 2233 or
-                      Base.fields.get(i).coordinate == 2332 or
-                      Base.fields.get(i).coordinate == 2431 or
+                      Base.fields.get(i).coordinate == 2134 ||
+                      Base.fields.get(i).coordinate == 2233 ||
+                      Base.fields.get(i).coordinate == 2332 ||
+                      Base.fields.get(i).coordinate == 2431 ||
                       
-                      Base.fields.get(i).coordinate == 3111 or
-                      Base.fields.get(i).coordinate == 3122 or
-                      Base.fields.get(i).coordinate == 3133 or
+                      Base.fields.get(i).coordinate == 3111 ||
+                      Base.fields.get(i).coordinate == 3122 ||
+                      Base.fields.get(i).coordinate == 3133 ||
                       Base.fields.get(i).coordinate == 3144 
              ){
                 Base.fields.get(i).type = 1; // Это поле является королевством игрока
