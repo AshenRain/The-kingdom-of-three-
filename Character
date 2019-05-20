@@ -5,6 +5,8 @@
  */
 package com.mycompany.chessproject;
 
+import javax.swing.JOptionPane;
+
 public class Character extends javax.swing.JFrame {
 
     int hp, dp,coordinate, countMove = 1;
@@ -72,8 +74,8 @@ public class Character extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-
-        CharacterMove();
+        int nado = Integer.parseInt(jTextField1.getText());
+        CharacterMove(nado, );
     }                                        
 
     void CharacterMove(int nado, int j) // передается код ячейки куда хочет перейти фигура
@@ -96,13 +98,13 @@ public class Character extends javax.swing.JFrame {
                     base.characters.get(j).coordinate = nado;
                     base.fields.get(arh).status = 1;
                 }
-                base.fields.get(i).coordinate;
             }
         }
         else
         {
             //уведмоляет пользователя что у фигуры не осталось очков передвижения
             //или о том что клетка не является соседней
+            JOptionPane.showMessageDialog(rootPane, "Клетка не является соседней/nИли у вигуры не осталось очков передвижения", "Внимание",3);
         }
     }
 
