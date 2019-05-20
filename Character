@@ -133,7 +133,8 @@ public class Character extends javax.swing.JFrame {
             if (s <= 1) return true;
             else return false;
         }
-    }
+        return false;
+ }
 
 
 
